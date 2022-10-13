@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Teste</h2>
+<div class="text-center">
+    <h1 class="display-4">Welcome Thiago</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.
+    </p>
+    <img id="amarelo" class="d-none" src=".\img\amarelo.jpg" alt="amarelo" width="100px">
+    <img id="verde" src=".\img\verde.png" alt="verde" width="100px">
+    <img id="vermelho" class="d-none" src=".\img\vermelho.jpg" alt="vermelho" width="100px">
+</div>
+<button onclick="MudarCor()">Mudar</button>
+
+<script>
+    function MudarCor() {
+        console.log("mudando cor")
+        let farolVerde;
+        let farolAmarelo;
+        let farolVermelho;
+
+        farolVerde = $("#verde").hasClass("d-none");
+        farolAmarelo = $("#amarelo").hasClass("d-none");
+        farolVermelho = $("vermelho").hasClass("d-none");
+        console.log(verde);
+        console.log(amarelo);
+        console.log(vermelho);
+
+        if (farolVerde == false) {
+            $("#verde").addClass("d-none");
+            $("#amarelo").removeClass("d-none");
+            //Ligar Amarelo
+        }
+        else if (farolAmarelo == false) {
+            $("#amarelo").addClass("d-none");
+            $("#vermelho").removeClass("d-none");
+            //Ligar Vermelho
+        }
+        else {
+            $("#vermelho").addClass("d-none");
+            $("#verde").removeClass("d-none");
+            //Ligar Verde
+        }
+    }
+</script>
